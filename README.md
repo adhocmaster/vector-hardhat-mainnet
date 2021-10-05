@@ -1,15 +1,8 @@
-# Basic Sample Hardhat Project
+# Mainnet fork for vector stack
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+The chain id is set to 1 for hardhat. To run:
 
-Try running some of the following tasks:
+    npx hardhat node
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+
+To connect to this node from your apps, use 1 as the chain id and http://localhost:8545 as the url.
