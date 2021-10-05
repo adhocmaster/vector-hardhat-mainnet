@@ -20,13 +20,14 @@ const mnemonic = "candy maple cake sugar pudding cream honey rich smooth crumble
  */
 module.exports = {
   solidity: "0.8.4",
+  port:666,
   networks: {
     hardhat: {
       forking: {
         url: "https://eth-mainnet.alchemyapi.io/v2/yGcxW9nz2_uwkKk6p5GaLp4Yo2xuGuO9",
         blockNumber: 11551572
       },
-      chainId: 1
+      chainId: 1,
     },
     localhost: {
       chainId: 1,
