@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+// require('hardhat-ethernal');
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -23,19 +24,27 @@ module.exports = {
   port:666,
   networks: {
     hardhat: {
-      forking: {
-        url: "https://eth-mainnet.alchemyapi.io/v2/yGcxW9nz2_uwkKk6p5GaLp4Yo2xuGuO9",
-        blockNumber: 11551572
+      // forking: {
+      //   url: "https://eth-mainnet.alchemyapi.io/v2/yGcxW9nz2_uwkKk6p5GaLp4Yo2xuGuO9",
+      //   blockNumber: 11551572
+      // },
+      accounts: {
+        mnemonic: mnemonic,
+        accountsBalance: "10000000000000000000000",
       },
-      chainId: 1,
+      chainId: 1337,
     },
     localhost: {
-      chainId: 1,
+      chainId: 1337,
       url: "http://localhost:8545",
+      accounts: {
+        mnemonic: mnemonic,
+        accountsBalance: "10000000000000000000000",
+      },
     },
     mainnet: {
       accounts: { mnemonic },
-      chainId: 1,
+      chainId: 1337,
       url: "http://localhost:8545",
     },
   },
